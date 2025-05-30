@@ -1,0 +1,385 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 以上是 CSS reset */
+
+.info {
+  margin: 0 auto;
+  max-width: 636px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 25px;
+}
+
+.header {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.title a {
+  text-decoration: none;
+  color: #000;
+  margin: 5px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+a:hover {
+  color: blue;
+}
+
+.container {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+}
+
+.thumbnail {
+  display: block;
+  width: 40%; /* 可調整成 60%/40% 根據圖片與文字比例喜好 */
+  height: auto;
+  object-fit: cover;
+}
+
+.wrap_text {
+  width: 100%;
+}
+
+.date {
+  display: block;
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.tag {
+  font-size: 24px;
+  color: #0027d5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.stag {
+  background-color: #0027d5;
+  color: white;
+  font-size: 16px;
+  margin-top: 12px;
+  margin-left: 12px;
+  padding: 6px 6px;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #111;
+  margin: 0;
+}
+
+.word1 img {
+  max-width: 636px;
+}
+
+.word1 h2 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: #0027d5;
+}
+
+.word1 p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.text1 h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0027d5;
+}
+
+.text1 h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.text1 p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.text1 ol {
+  list-style-type: decimal;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  font-size: 16px;
+  font-weight: 600;
+  padding-inline-start: 0;
+}
+
+.text1 ul {
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  font-size: 16px;
+  font-weight: 600;
+  padding-inline-start: 0;
+}
+
+.text1 li {
+  font-size: 16px;
+  margin-left: 1.5em;
+  line-height: 1.5;
+}
+
+.text1 a {
+  text-decoration: none;
+}
+
+.special {
+  max-width: 636px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: #ededed;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 20px 25px;
+  display: block;
+}
+
+.bottom ol {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom li {
+  list-style: none;
+}
+.bottom a {
+  text-decoration: none;
+  color: #2b2828;
+  border: 1px solid #2b2828;
+  padding: 8px;
+  border-radius: 50px;
+}
+.bottom a:hover {
+  color: #ededed;
+  background-color: #2b2828;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+  font-size: 24px;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  img {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .footer-info {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .wrap {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 auto;
+    flex-direction: column;
+  }
+
+  .wrap img {
+    width: 95%;
+    align-items: center;
+  }
+
+  .wrap_text {
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .footer {
+    width: 100%;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-size: 14px;
+    padding: 40px 10px;
+  }
+}
+@media (max-width: 480px) {
+  img {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
