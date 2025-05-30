@@ -317,11 +317,25 @@ h1 {
 
 .footer-info {
   display: flex;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: center; 
   align-items: center;
-  font-size: 24px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
+  gap: 16px; 
+  padding: 20px;
+  font-size: 18px;
+  flex-direction: row; 
+  text-align: center;
+}
+
+.footer-info .icon {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-info .icon img {
+  width: 24px;
+  height: 24px;
 }
 
 .footer {
