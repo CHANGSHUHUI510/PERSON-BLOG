@@ -1,8 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+/* http://meyerweb.com/eric/tools/css/reset/ */
 html,
 body,
 div,
@@ -91,7 +87,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* */
 article,
 aside,
 details,
@@ -107,6 +102,7 @@ section {
 }
 body {
   line-height: 1;
+  font-family: "Noto Sans TC", sans-serif;
 }
 ol,
 ul {
@@ -128,22 +124,33 @@ table {
   border-spacing: 0;
 }
 
-/* 以上是 CSS reset */
+.container {
+  max-width: 1140px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 .info {
   margin: 0 auto;
   max-width: 636px;
-  font-family: "Noto Sans TC", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   padding: 25px;
 }
 
 .header {
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  text-align: center;
 }
+
 .title {
   display: flex;
   justify-content: center;
@@ -163,30 +170,22 @@ a:hover {
   color: blue;
 }
 
-.container {
-  max-width: 100%;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
 .wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
 .thumbnail {
-  display: block;
-  width: 40%; /* 可調整成 60%/40% 根據圖片與文字比例喜好 */
-  height: auto;
+  width: 40%;
   object-fit: cover;
 }
 
 .wrap_text {
-  width: 100%;
+  width: 55%;
 }
 
 .date {
@@ -199,8 +198,7 @@ a:hover {
 .tag {
   font-size: 24px;
   color: #0027d5;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .stag {
@@ -209,7 +207,7 @@ a:hover {
   font-size: 16px;
   margin-top: 12px;
   margin-left: 12px;
-  padding: 6px 6px;
+  padding: 6px;
   border-radius: 20px;
 }
 
@@ -258,12 +256,11 @@ h1 {
 
 .text1 ol {
   list-style-type: decimal;
-
   margin-block-start: 1em;
   margin-block-end: 1em;
   font-size: 16px;
   font-weight: 600;
-  padding-inline-start: 0;
+  padding-inline-start: 1.5em;
 }
 
 .text1 ul {
@@ -272,13 +269,13 @@ h1 {
   margin-block-end: 1em;
   font-size: 16px;
   font-weight: 600;
-  padding-inline-start: 0;
+  padding-inline-start: 1.5em;
 }
 
 .text1 li {
   font-size: 16px;
-  margin-left: 1.5em;
   line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .text1 a {
@@ -287,8 +284,7 @@ h1 {
 
 .special {
   max-width: 636px;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin: 10px auto 30px;
   background-color: #ededed;
   border-radius: 25px;
   font-weight: 600;
@@ -301,9 +297,11 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+
 .bottom li {
   list-style: none;
 }
+
 .bottom a {
   text-decoration: none;
   color: #2b2828;
@@ -311,6 +309,7 @@ h1 {
   padding: 8px;
   border-radius: 50px;
 }
+
 .bottom a:hover {
   color: #ededed;
   background-color: #2b2828;
@@ -322,64 +321,45 @@ h1 {
   padding: 20px;
   align-items: center;
   font-size: 24px;
+  flex-wrap: wrap;
 }
+
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 40px 16px;
   font-size: 16px;
 }
 
 @media (max-width: 992px) {
-  img {
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
   .footer-info {
-    width: 48%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    display: none;
+    gap: 12px;
   }
 }
+
 @media (max-width: 767px) {
   .wrap {
-    max-width: 100%;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0 auto;
     flex-direction: column;
-  }
-
-  .wrap img {
-    width: 95%;
-    align-items: center;
   }
 
   .wrap_text {
     text-align: center;
+    width: 100%;
   }
 
-  img {
+  .thumbnail {
     width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
   }
+
   .footer {
-    width: 100%;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 40px 16px;
     font-size: 14px;
-    padding: 40px 10px;
   }
 }
+
 @media (max-width: 480px) {
-  img {
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+  .title {
+    flex-direction: column;
   }
 }
