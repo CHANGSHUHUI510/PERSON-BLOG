@@ -317,12 +317,12 @@ h1 {
 
 .footer-info {
   display: flex;
-  justify-content: center; 
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap; 
   gap: 16px; 
   padding: 20px;
-  font-size: 18px;
+  font-size: 24px;
   flex-direction: row; 
   text-align: center;
 }
@@ -334,8 +334,8 @@ h1 {
 }
 
 .footer-info .icon img {
-  width: 24px;
-  height: 24px;
+  width: 48px;
+  height: 48px;
 }
 
 .footer {
