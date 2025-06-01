@@ -72,8 +72,6 @@ header,
 hgroup,
 menu,
 nav,
-output,
-ruby,
 section,
 summary,
 time,
@@ -122,6 +120,10 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .container {
@@ -177,15 +179,19 @@ a:hover {
   width: 100%;
   gap: 40px;
   flex-wrap: wrap;
+  max-width: 100%;       
+  box-sizing: border-box; 
 }
 
 .thumbnail {
-  width: 40%;
+  flex: 1 1 40%;          
+  max-width: 40%;         
   object-fit: cover;
 }
 
 .wrap_text {
-  width: 55%;
+  flex: 1 1 55%;          
+  max-width: 55%;         
 }
 
 .date {
@@ -319,11 +325,11 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; 
-  gap: 16px; 
+  flex-wrap: wrap;
+  gap: 16px;
   padding: 20px;
   font-size: 24px;
-  flex-direction: row; 
+  flex-direction: row;
   text-align: center;
 }
 
@@ -355,6 +361,12 @@ h1 {
 @media (max-width: 767px) {
   .wrap {
     flex-direction: column;
+    gap: 24px;           
+  }
+
+  .wrap_text,
+  .thumbnail {
+    max-width: 100%;     
   }
 
   .wrap_text {
@@ -375,5 +387,9 @@ h1 {
 @media (max-width: 480px) {
   .title {
     flex-direction: column;
+  }
+
+  .wrap {
+    gap: 16px;          
   }
 }
