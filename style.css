@@ -1,83 +1,15 @@
-/* http://meyerweb.com/eric/tools/css/reset/ */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -85,17 +17,9 @@ video {
   vertical-align: baseline;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -104,21 +28,18 @@ body {
   font-family: "Noto Sans TC", sans-serif;
 }
 
-ol,
-ul {
+ol, ul {
   list-style: none;
 }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none;
 }
 
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-  content: "";
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
 }
 
 table {
@@ -130,6 +51,7 @@ table {
   box-sizing: border-box;
 }
 
+/* Container with responsive padding */
 .container {
   max-width: 1140px;
   margin: 0 auto;
@@ -143,13 +65,6 @@ img {
   margin: 0 auto;
 }
 
-.info {
-  margin: 0 auto;
-  max-width: 636px;
-  line-height: 1.6;
-  padding: 25px;
-}
-
 .header {
   margin: 20px auto;
   text-align: center;
@@ -158,26 +73,27 @@ img {
 .title {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; 
+  gap: 12px;
 }
 
 .title a {
   text-decoration: none;
   color: #000;
-  margin: 5px;
-  padding: 20px;
   font-weight: bold;
   font-size: 30px;
+  padding: 12px 16px;
 }
 
-a:hover {
-  color: blue;
+.title a:hover {
+  color: red;
 }
 
 .wrap {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   gap: 40px;
   width: 100%;
 }
@@ -209,119 +125,94 @@ a:hover {
   background-color: #0027d5;
   color: white;
   font-size: 16px;
-  margin-top: 12px;
   margin-left: 12px;
-  padding: 6px;
+  padding: 6px 12px;
   border-radius: 20px;
 }
 
 h1 {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: bold;
   color: #111;
   margin: 0;
 }
 
-.word1 img {
+.info {
   max-width: 636px;
+  margin: 0 auto;
+  line-height: 1.6;
+  padding: 25px;
 }
 
-.word1 h2 {
-  font-size: 35px;
-  font-weight: bold;
-  margin-bottom: 0.5em;
+.word1 h2,
+.word2 h2,
+.word3 h2,
+.word4 h2,
+.word5 h2 {
+  font-size: 32px;
   color: #0027d5;
-}
-
-.word1 p {
-  font-weight: 600;
-  margin: 20px 0;
-}
-
-.text1 h2 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #0027d5;
+  margin-bottom: 12px;
 }
 
 .text1 h3 {
   font-size: 20px;
   font-weight: 700;
-  margin: 20px 0;
+  margin: 20px 0 10px;
 }
 
 .text1 p {
-  font-weight: 600;
-  margin: 20px 0;
-}
-
-.text1 ol,
-.text1 ul {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  padding-inline-start: 1.5em;
-}
-
-.text1 ol {
-  list-style-type: decimal;
+  margin: 16px 0;
+  font-weight: 500;
 }
 
 .text1 ul {
-  list-style-type: disc;
+  list-style: disc;
+  padding-left: 1.5em;
+  margin: 0 0 16px;
 }
 
 .text1 li {
-  line-height: 1.5;
   margin-bottom: 8px;
-}
-
-.text1 a {
-  text-decoration: none;
+  line-height: 1.5;
 }
 
 .special {
-  max-width: 636px;
-  margin: 10px auto 30px;
   background-color: #ededed;
-  border-radius: 25px;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 636px;
   font-weight: 600;
-  padding: 20px 25px;
-  display: block;
 }
 
 .bottom ol {
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
-}
-
-.bottom li {
-  list-style: none;
+  margin-top: 40px;
+  padding: 0 16px;
 }
 
 .bottom a {
   text-decoration: none;
   color: #2b2828;
   border: 1px solid #2b2828;
-  padding: 8px;
+  padding: 8px 16px;
   border-radius: 50px;
 }
 
 .bottom a:hover {
-  color: #ededed;
   background-color: #2b2828;
+  color: white;
 }
 
 .footer-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   padding: 20px;
-  font-size: 24px;
-  flex-direction: row;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -339,18 +230,10 @@ h1 {
 .footer {
   text-align: center;
   padding: 40px 16px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-@media (max-width: 992px) {
-  .footer-info {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-}
-
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   .wrap {
     flex-direction: column;
     gap: 24px;
@@ -366,28 +249,32 @@ h1 {
     text-align: center;
   }
 
-  .footer {
-    padding: 40px 16px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 700px) {
   .container {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
   }
-  .info {
-    padding: 16px;
+
+  .footer-info {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .title {
+    flex-direction: column;
   }
 }
 
 @media (max-width: 480px) {
-  .title {
-    flex-direction: column;
+  h1 {
+    font-size: 22px;
   }
-
-  .wrap {
-    gap: 16px;
+  .title a {
+    font-size: 24px;
+  }
+  .tag {
+    font-size: 20px;
+  }
+  .stag {
+    font-size: 14px;
+    padding: 4px 10px;
   }
 }
