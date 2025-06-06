@@ -81,10 +81,10 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -98,25 +98,29 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
   font-family: "Noto Sans TC", sans-serif;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
   content: "";
-  content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -128,7 +132,6 @@ table {
 
 .container {
   max-width: 1140px;
-  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -143,7 +146,6 @@ img {
 .info {
   margin: 0 auto;
   max-width: 636px;
-  font-size: 16px;
   line-height: 1.6;
   padding: 25px;
 }
@@ -156,7 +158,6 @@ img {
 .title {
   display: flex;
   justify-content: center;
-  list-style-type: none;
 }
 
 .title a {
@@ -176,28 +177,25 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  gap: 40px;
   flex-wrap: wrap;
-  max-width: 100%;       
-  box-sizing: border-box; 
+  gap: 40px;
+  width: 100%;
 }
 
 .thumbnail {
-  flex: 1 1 40%;          
-  max-width: 40%;         
+  flex: 0 0 40%;
+  max-width: 40%;
   object-fit: cover;
 }
 
 .wrap_text {
-  flex: 1 1 55%;          
-  max-width: 55%;         
+  flex: 1;
+  max-width: 60%;
 }
 
 .date {
   display: block;
-  font-size: 16px;
-  color: #000000;
+  color: #000;
   margin-bottom: 8px;
 }
 
@@ -236,7 +234,6 @@ h1 {
 }
 
 .word1 p {
-  font-size: 16px;
   font-weight: 600;
   margin: 20px 0;
 }
@@ -255,31 +252,26 @@ h1 {
 }
 
 .text1 p {
-  font-size: 16px;
   font-weight: 600;
   margin: 20px 0;
 }
 
-.text1 ol {
-  list-style-type: decimal;
+.text1 ol,
+.text1 ul {
   margin-block-start: 1em;
   margin-block-end: 1em;
-  font-size: 16px;
-  font-weight: 600;
   padding-inline-start: 1.5em;
+}
+
+.text1 ol {
+  list-style-type: decimal;
 }
 
 .text1 ul {
   list-style-type: disc;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  font-size: 16px;
-  font-weight: 600;
-  padding-inline-start: 1.5em;
 }
 
 .text1 li {
-  font-size: 16px;
   line-height: 1.5;
   margin-bottom: 8px;
 }
@@ -361,26 +353,32 @@ h1 {
 @media (max-width: 767px) {
   .wrap {
     flex-direction: column;
-    gap: 24px;           
+    gap: 24px;
   }
 
   .wrap_text,
   .thumbnail {
-    max-width: 100%;     
+    max-width: 100%;
+    width: 100%;
   }
 
   .wrap_text {
     text-align: center;
-    width: 100%;
-  }
-
-  .thumbnail {
-    width: 100%;
   }
 
   .footer {
     padding: 40px 16px;
     font-size: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .info {
+    padding: 16px;
   }
 }
 
@@ -390,6 +388,6 @@ h1 {
   }
 
   .wrap {
-    gap: 16px;          
+    gap: 16px;
   }
 }
